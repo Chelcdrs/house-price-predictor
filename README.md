@@ -42,7 +42,7 @@ After improving the model, I tested it and calculated:
 - R² score
 
 ### d. Model Performance:
-The final model performed Ill with:
+The final model performed well with:
 - MAE: 0.530
 - RMSE: 0.670
 - R² score: 0.835
@@ -53,7 +53,7 @@ The trained model was saved using Joblib as `house_price_model.pkl` and the scal
 ## 4. Model Deployment
 
 ### a. API Deployment Strategy:
-The model is deployed using FastAPI, which allows others to get predictions through a Ib request.
+The model is deployed using FastAPI, which allows others to get predictions through a web request.
 
 ### b. Deployment Steps:
 - The app.py file contains the FastAPI app. It has an endpoint `/predict`, which takes the input data in JSON format and returns the predicted house price.
@@ -78,12 +78,12 @@ The model is deployed using FastAPI, which allows others to get predictions thro
   }
 
 ### d. Testing the API:
-You can test the API with tools like Postman or cURL by sending a POST request to the `/predict` endpoint with your input data.
+You can test the API by using the cURL command in FastAPI to send a POST request to the `/predict` endpoint with your input data.
 
 ### e. Docker Setup:
 - **Dockerfile**: The project is packaged using Docker. The Dockerfile installs the necessary dependencies and runs the FastAPI app.
-- **Build the Docker image**: docker build -t house-price-prediction .
-- **Run the Docker container**: docker run -p 8000:8000 house-price-prediction
+- **Build the Docker image**: docker build -t house-price-predictor .
+- **Run the Docker container**: docker run -p 8000:8000 house-price-predictor
 
 ## 5. Conclusion
 This project shows how to clean data, train a machine learning model, optimize it, deploy it as an API using FastAPI, and package the app using Docker. The model provides accurate house price predictions and the API makes it easy for others to use the model.
@@ -93,9 +93,11 @@ This project shows how to clean data, train a machine learning model, optimize i
    git clone https://github.com/Chelcdrs/house-price-predictor.git
 2. Install the required dependencies:
    pip install -r requirements.txt
-3. Run the FastAPI app:
-   python app.py
-4. Access the API documentation at [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
+3. Run the app using this command:
+   python main.py
+4. Start the FastAPI server with:
+   uvicorn app:app --reload
+5. Access the API documentation at [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
 
 ## How to Use the API
 - Send a POST request to the `/predict` endpoint with the necessary JSON data (house features) and receive the predicted house price as a response.
