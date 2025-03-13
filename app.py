@@ -4,6 +4,7 @@ import joblib
 import numpy as np
 import os
 import logging
+import uvicorn
 
 # Set up logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -55,5 +56,4 @@ def predict_price(features: HouseFeatures):
 
 # Running the FastAPI application
 if __name__ == "__main__":
-    import uvicorn
     uvicorn.run("app:app", host="0.0.0.0", port=int(os.environ.get("PORT", 8000)))
