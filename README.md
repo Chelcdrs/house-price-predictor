@@ -6,7 +6,7 @@
 - [Example Prediction Request](#example-prediction-request)
 
 ## 1. Introduction
-This project predicts house prices using machine learning. The steps include loading a dataset (California Housing Dataset), cleaning the data, training a model, improving it, and creating an API for predictions. The model is deployed using FastAPI, so people can make predictions using a Ib request.
+This project predicts house prices using machine learning. The steps include loading a dataset (California Housing Dataset), cleaning the data, training a model, improving it, and creating an API for predictions. The model is deployed using FastAPI, so people can make predictions using a web request.
 
 ## 2. Data Preprocessing & Feature Engineering
 
