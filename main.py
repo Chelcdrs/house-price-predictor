@@ -56,5 +56,5 @@ r2 = r2_score(y_test, y_pred)  # R² score
 logger.info(f"Model Performance: MAE={mae}, RMSE={rmse}, R²={r2}")
 
 # Save model with compression to reduce size
-joblib.dump(model, model_path, compress=3)  # Compress the model with a compression level (3 is a good balance)
-joblib.dump(scaler, scaler_path, compress=3)  # Compress the scaler with compression level
+joblib.dump(model, model_path, compress=3)
+joblib.dump(scaler, scaler_path, compress=3)
