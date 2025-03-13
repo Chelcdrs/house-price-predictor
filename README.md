@@ -1,6 +1,6 @@
 # House Price Prediction - Machine Learning Model
 
-## Table of Contents
+## Shortcuts
 - [How to Run the Project Locally](#how-to-run-the-project-locally)
 - [How to Use the API](#how-to-use-the-api)
 - [Example Prediction Request](#example-prediction-request)
@@ -86,21 +86,14 @@ You can test the API with tools like Postman or cURL by sending a POST request t
 - **Build the Docker image**: docker build -t house-price-prediction .
 - **Run the Docker container**: docker run -p 8000:8000 house-price-prediction
 
-## 5. GitHub Repository
-The project is stored in a GitHub repository that includes:
-- Python scripts (main.py, app.py).
-- Model file (`house_price_model.pkl`, `scaler.pkl`).
-- Dockerfile.
-- requirements.txt for dependencies.
-
 [GitHub Repository](Link to GitHub Repository)
 
-## 6. Conclusion
+## 5. Conclusion
 This project shows how to clean data, train a machine learning model, optimize it, deploy it as an API using FastAPI, and package the app using Docker. The model provides accurate house price predictions and the API makes it easy for others to use the model.
 
 ## How to Run the Project Locally
 1. Clone the repository:
-   git clone https://github.com/yourusername/house-price-prediction.git
+   git clone https://github.com/chelcdrs/house-price-predictor.git
 2. Install the required dependencies:
    pip install -r requirements.txt
 3. Run the FastAPI app:
