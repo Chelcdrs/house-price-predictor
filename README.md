@@ -62,6 +62,7 @@ The model is deployed using FastAPI, which allows others to get predictions thro
 ### c. API Usage Guide:
 - **Endpoint**: `/predict`
 - **Request Format**: JSON with features like MedInc, HouseAge, AveRooms, etc. Example request:
+```
   {
     "MedInc": 8.0,
     "HouseAge": 30.0,
@@ -72,10 +73,13 @@ The model is deployed using FastAPI, which allows others to get predictions thro
     "Latitude": 34.0,
     "Longitude": -118.0
   }
+```
 - **Response**: The API will return the predicted house price. Example response:
+ ```
   {
       "predicted_price": 3.75
   }
+```
 
 ### d. Testing the API:
 You can test the API by using the cURL command in FastAPI to send a POST request to the `/predict` endpoint with your input data.
@@ -104,7 +108,7 @@ This project shows how to clean data, train a machine learning model, optimize i
 
 ## Example Prediction Request
 POST request to [http://127.0.0.1:8000/predict](http://127.0.0.1:8000/predict) with the following JSON data:
-
+```plaintext
 {
   "MedInc": 8.0,
   "HouseAge": 30.0,
@@ -115,8 +119,10 @@ POST request to [http://127.0.0.1:8000/predict](http://127.0.0.1:8000/predict) w
   "Latitude": 34.0,
   "Longitude": -118.0
 }
-
+```
 Response:
+```
 {
     "predicted_price": 3.75
 }
+```
