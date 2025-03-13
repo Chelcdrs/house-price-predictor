@@ -4,46 +4,45 @@
 - [How to Run the Project Locally](#how-to-run-the-project-locally)
 - [How to Use the API](#how-to-use-the-api)
 - [Example Prediction Request](#example-prediction-request)
-- [GitHub Repository](#github-repository)
 
 ## 1. Introduction
-This project predicts house prices using machine learning. The steps include loading a dataset (California Housing Dataset), cleaning the data, training a model, improving it, and creating an API for predictions. The model is deployed using FastAPI, so people can make predictions using a web request.
+This project predicts house prices using machine learning. The steps include loading a dataset (California Housing Dataset), cleaning the data, training a model, improving it, and creating an API for predictions. The model is deployed using FastAPI, so people can make predictions using a Ib request.
 
 ## 2. Data Preprocessing & Feature Engineering
 
 ### a. Dataset Overview:
-We used the California Housing Dataset from Scikit-learn. It has details about houses like location, income, and house age.
-The target (what we're predicting) is the house price (MedHouseVal).
+I used the California Housing Dataset from Scikit-learn. It has details about houses like location, income, and house age.
+The target (what I'm predicting) is the house price (MedHouseVal).
 
 ### b. Data Preprocessing:
-- **Missing Values**: The dataset didn't have any missing data, so we didn’t need to fix that.
-- **Feature Scaling**: We used StandardScaler() to scale the numbers, so that all features are treated equally.
-- **Feature Selection**: We used all features in the dataset because they are important for predicting the house price.
+- **Missing Values**: The dataset didn't have any missing data, so I didn’t need to fix that.
+- **Feature Scaling**: I used StandardScaler() to scale the numbers, so that all features are treated equally.
+- **Feature Selection**: I used all features in the dataset because they are important for predicting the house price.
 
 ### c. Feature Engineering:
-- We scaled the data using StandardScaler().
-- We split the data into features (X) and target (y).
+- I scaled the data using StandardScaler().
+- I split the data into features (X) and target (y).
 - The data was then split into training and testing sets (80% for training, 20% for testing).
 
 ## 3. Model Selection & Optimization
 
 ### a. Model Selection:
-We chose a Random Forest Regressor model because it's good at making predictions from complex data and doesn’t overfit easily.
+I chose a Random Forest Regressor model because it's good at making predictions from complex data and doesn’t overfit easily.
 
 ### b. Model Optimization:
-We improved the model by tuning its settings. We tried different values for:
+I improved the model by tuning its settings. I tried different values for:
 - n_estimators: Number of trees (tried 50, 100, 200).
 - max_depth: Maximum depth of trees (tried None, 10, 20).
 - min_samples_split: Minimum number of samples to split (tried 2, 5, 10).
 
 ### c. Model Evaluation:
-After improving the model, we tested it and calculated:
+After improving the model, I tested it and calculated:
 - Mean Absolute Error (MAE)
 - Root Mean Squared Error (RMSE)
 - R² score
 
 ### d. Model Performance:
-The final model performed well with:
+The final model performed Ill with:
 - MAE: 0.530
 - RMSE: 0.670
 - R² score: 0.835
@@ -54,7 +53,7 @@ The trained model was saved using Joblib as `house_price_model.pkl` and the scal
 ## 4. Model Deployment
 
 ### a. API Deployment Strategy:
-The model is deployed using FastAPI, which allows others to get predictions through a web request.
+The model is deployed using FastAPI, which allows others to get predictions through a Ib request.
 
 ### b. Deployment Steps:
 - The app.py file contains the FastAPI app. It has an endpoint `/predict`, which takes the input data in JSON format and returns the predicted house price.
@@ -86,14 +85,12 @@ You can test the API with tools like Postman or cURL by sending a POST request t
 - **Build the Docker image**: docker build -t house-price-prediction .
 - **Run the Docker container**: docker run -p 8000:8000 house-price-prediction
 
-[GitHub Repository](Link to GitHub Repository)
-
 ## 5. Conclusion
 This project shows how to clean data, train a machine learning model, optimize it, deploy it as an API using FastAPI, and package the app using Docker. The model provides accurate house price predictions and the API makes it easy for others to use the model.
 
 ## How to Run the Project Locally
 1. Clone the repository:
-   git clone https://github.com/chelcdrs/house-price-predictor.git
+   git clone https://github.com/Chelcdrs/house-price-predictor.git
 2. Install the required dependencies:
    pip install -r requirements.txt
 3. Run the FastAPI app:
